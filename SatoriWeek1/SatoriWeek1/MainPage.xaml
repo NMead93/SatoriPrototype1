@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SatoriWeek1"
+             x:Class="SatoriWeek1.MainPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="NavIcon" Order="Primary" Text="Alert" Priority="0" Clicked="ShowAlert"/>
+    </ContentPage.ToolbarItems>
+    
+    <StackLayout Spacing="10"
+                 Padding="10">
+        <Label Text="Week 1" 
+               VerticalOptions="Center" 
+               HorizontalOptions="Center" 
+               x:Name="alertButton"/>
+        <Button Text="Animation Examples"
+                BackgroundColor="Blue" 
+                x:Name="animationLink"
+                Clicked="GoToAnimationPage"/>
+        <Button Text="SQLite Example"
+                BackgroundColor="Black"
+                TextColor="White"
+                x:Name="SQLiteButton"
+                Clicked="OnSQLiteButtonClicked"/>
+        <Label Text="DB Path"
+               x:Name="textLabel"/>
+    </StackLayout>
+
+</ContentPage>

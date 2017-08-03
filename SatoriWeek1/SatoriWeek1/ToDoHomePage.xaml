@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SatoriWeek1.ToDoHomePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="newItem" 
+                   Placeholder="Enter New To Do Item"/>
+
+            <Button Text="Add Item" 
+                    Clicked="OnAddItemClicked" />
+
+            <Label x:Name="StatusMessage"/>
+
+            <Button Text="Get Current Items"
+                    Clicked="OnGetItemsClicked"/>
+
+            <ListView x:Name="itemList">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Name}" />
+                        <TextCell Text="Delete"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
