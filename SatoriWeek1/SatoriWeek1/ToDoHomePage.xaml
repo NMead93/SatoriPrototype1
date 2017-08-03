@@ -19,7 +19,6 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <TextCell Text="{Binding Name}" />
-                        <TextCell Text="Delete"/>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

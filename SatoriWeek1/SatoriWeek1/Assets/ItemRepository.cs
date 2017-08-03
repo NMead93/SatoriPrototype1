@@ -84,23 +84,23 @@ namespace SatoriWeek1
             return Enumerable.Empty<Item>();
         }
 
-        public async Task DeleteItem(int id)
-        {
-            try
-            {
-                var Item = await GetItem(id);
-                var result = await conn.DeleteAsync(Item);
-                StatusMessage = String.Format("Successfully deleted {0}", Item.Name);
-            }
-            catch (Exception ex)
-            {
-                StatusMessage = string.Format("Failed to delete data. {0}", ex.Message);
-            }
-        }
+        //public async Task DeleteItem(int id)
+        //{
+        //    try
+        //    {
+        //        var Item = await GetItem(id);
+        //        var result = await conn.DeleteAsync(Item);
+        //        StatusMessage = String.Format("Successfully deleted {0}", Item.Name);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        StatusMessage = string.Format("Failed to delete data. {0}", ex.Message);
+        //    }
+        //}
 
-        public async Task<Item> GetItem(int id)
-        {
-            return await conn.Table<Item>().Where(i => i.Id == id).FirstOrDefaultAsync();
-        }
+        //public async Task<Item> GetItem(int id)
+        //{
+        //    return await conn.Table<Item>().Where(i => i.Id == id).FirstOrDefaultAsync();
+        //}
     }
 }
